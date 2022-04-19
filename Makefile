@@ -4,8 +4,9 @@ LDFLAGS  := "-Wl,-O1,--sort-common,--as-needed,-z,relro,-z,now"
 SRC      := hostap
 HOSTAPD  := $(SRC)/hostapd/
 WPA_SUPP := $(SRC)/wpa_supplicant/
+DESTDIR  := bin/
 
-all: sources hostapd eapol_test certificates
+all: sources hostapd eapol_test
 
 sources:
 	test -d $(SRC) || git clone git://w1.fi/hostap.git $(SRC)
@@ -21,4 +22,11 @@ eapol_test:
 	cd $(WPA_SUPP) && make eapol_test
 
 certificates:
-	cd certs && make
+	mkdir -p $(DESTDIR)
+	cp -r certs $(DESTDIR)certs
+	cd $(DESTDIR)certs/ && make
+
+install:
+	mkdir -p $(DESTDIR)
+	install -Dm755 $(HOSTAPD)hostapd $(DESTDIR)hostapd
+	install -Dm755 $(WPA_SUPP)eapol_test $(DESTDIR)eapol_test
