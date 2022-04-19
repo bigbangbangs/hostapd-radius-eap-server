@@ -71,3 +71,18 @@ The MD4s expected for MSCHAPV2 are not ones that can be quickly generated and in
 ```
 cd utils && go run md4.go --password test
 ```
+
+# contents
+
+## files
+
+- `build.config` contains the minset of build settings for `hostapd` to act as a RADIUS/EAP (PEAP+MSCHAPV2 and MAB methods)
+- `clients` is the configuration file used to allow clients (e.g. switches) to talk to the RADIUS server
+- `eap_users` is the list of users/MACs for authing
+- `eapol_test.conf` is a test configuration file to use with `eapol_test` for EAP-based methods
+- `hostapd.conf` is the `hostapd` daemon configuration file required to run as a RADIUS/EAP server
+
+## notes
+
+- As mentioned previously the certs/md4 files are all under the `utils/` area
+- The `.github/workflows/main.yml` file contains the CI settings for alpine (e.g. how to build/run in Alpine Linux)
