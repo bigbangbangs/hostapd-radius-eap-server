@@ -37,3 +37,4 @@ install:
 	install -Dm755 $(WPA_SUPP)eapol_test $(DESTDIR)eapol_test
 	install -Dm600 eap_users $(DESTDIR)eap_users
 	install -Dm600 clients $(DESTDIR)clients
+	install -Dm600 eapol_test.conf $(DESTDIR)eapol_test.conf

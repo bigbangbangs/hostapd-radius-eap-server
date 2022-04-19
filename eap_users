@@ -1,9 +1,10 @@
-"user.name:token@vlan.xyz" PEAP
+"user.name" PEAP
 
-"user.name:token@vlan.xyz" MSCHAPV2 hash:db346d691d7acc4dc2625db19f9e3f52 [2]
+"user.name" MSCHAPV2 hash:0cb6948805f797bf2a82807973b89537 [2]
 radius_accept_attr=64:d:13
 radius_accept_attr=65:d:6
 radius_accept_attr=81:s:2
+
 "AABBCCDDEEFF" MD5 "AABBCCDDEEFF"
 radius_accept_attr=64:d:13
 radius_accept_attr=65:d:6
