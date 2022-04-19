@@ -69,7 +69,7 @@ _Notice the MAC here is not the MAB'd one in the config as `eapol_test` is actin
 The MD4s expected for MSCHAPV2 are not ones that can be quickly generated and instead require specific formatting. A small utility has been included to help.
 
 ```
-cd utils && go run md4.go --password test
+cd utils/hashes && go run md4.go --password test
 ```
 
 # contents
