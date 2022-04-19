@@ -1,4 +1,4 @@
-TAG      := hostap_2_9
+TAG      := hostap_2_10
 SRC      := hostap
 HOSTAPD  := $(SRC)/hostapd/
 WPA_SUPP := $(SRC)/wpa_supplicant/
