@@ -86,4 +86,4 @@ cd utils && go run md4.go --password test
 
 - As mentioned previously the certs/md4 files are all under the `utils/` area
 - The `.github/workflows/main.yml` file contains the CI settings for alpine (e.g. how to build/run in Alpine Linux)
-- Check out the [hostapd source/configs for more information](https://w1.fi/cgit/hostap/tree/hostapd/)
+- Check out the [hostapd source/configs](https://w1.fi/cgit/hostap/tree/hostapd/) for more information
