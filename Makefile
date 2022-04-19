@@ -4,7 +4,8 @@ LDFLAGS  := "-Wl,-O1,--sort-common,--as-needed,-z,relro,-z,now"
 SRC      := hostap
 HOSTAPD  := $(SRC)/hostapd/
 WPA_SUPP := $(SRC)/wpa_supplicant/
-DESTDIR  := bin/
+CERTKEY  := mysecretkey
+DESTDIR  := $(PWD)/bin/
 
 all: sources hostapd eapol_test
 
@@ -24,9 +25,15 @@ eapol_test:
 certificates:
 	mkdir -p $(DESTDIR)
 	cp -r certs $(DESTDIR)certs
+	sed -i "s/{PASSWORD}/$(CERTKEY)/g" $(DESTDIR)certs/*.cnf
 	cd $(DESTDIR)certs/ && make
 
 install:
 	mkdir -p $(DESTDIR)
+	install -Dm600 hostapd.conf $(DESTDIR)
+	sed -i "s/{PASSWORD}/$(CERTKEY)/g" $(DESTDIR)hostapd.conf
+	sed -i "s#{PATH}#$(DESTDIR)#g" $(DESTDIR)hostapd.conf
 	install -Dm755 $(HOSTAPD)hostapd $(DESTDIR)hostapd
 	install -Dm755 $(WPA_SUPP)eapol_test $(DESTDIR)eapol_test
+	install -Dm600 eap_users $(DESTDIR)eap_users
+	install -Dm600 clients $(DESTDIR)clients
