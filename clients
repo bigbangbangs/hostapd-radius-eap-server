@@ -1,2 +1,7 @@
 # the key for server/client communications
 127.0.0.1 secretclientkey
+
+# alternatively:
+#10.1.2.3	secret passphrase
+#192.168.1.0/24	another very secret passphrase
+#0.0.0.0/0	radius
