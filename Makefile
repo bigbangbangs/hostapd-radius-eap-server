@@ -22,7 +22,7 @@ eapol_test:
 
 certificates:
 	mkdir -p $(DESTDIR)
-	cp -r certs $(DESTDIR)certs
+	cp -r utils/certs $(DESTDIR)certs
 	sed -i "s/{PASSWORD}/$(CERTKEY)/g" $(DESTDIR)certs/*.cnf
 	cd $(DESTDIR)certs/ && make
 
