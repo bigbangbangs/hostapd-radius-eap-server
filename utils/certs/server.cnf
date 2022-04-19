@@ -48,7 +48,7 @@ output_password = {PASSWORD}
 countryName		= US
 stateOrProvinceName	= Radius
 localityName		= radius
-organizationName	= dotonex
+organizationName	= development
 emailAddress		= admin@example.org
-commonName		= "dotonex Server Certificate"
+commonName		= "Development Hostapd Server Certificate"
 

@@ -50,9 +50,9 @@ output_password = {PASSWORD}
 countryName		= US
 stateOrProvinceName	= Radius
 localityName		= radius
-organizationName	= dotonex
+organizationName	= development
 emailAddress		= admin@example.org
-commonName		= "dotonex Certificate Authority"
+commonName		= "Development Hostapd Certificate Authority"
 
 [v3_ca]
 subjectKeyIdentifier	= hash
