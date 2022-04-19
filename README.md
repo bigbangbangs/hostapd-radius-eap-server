@@ -1,7 +1,7 @@
 hostapd RADIUS/EAP server
 ===
 
-Provides setup to run `hostapd` as a RADIUS/EAP server (developmentally).
+Provides setup to run [hostapd](https://w1.fi/hostapd/) as a RADIUS/EAP server (developmentally).
 
 This is mostly a "knowledge" repository and parts can translate to production but the defaults
 within this repository are meant for "quick start" over "proper".
