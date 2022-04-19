@@ -1,6 +1,4 @@
 TAG      := hostap_2_9
-CFLAGS   := "-march=native -mtune=generic -O2 -pipe -fno-plt"
-LDFLAGS  := "-Wl,-O1,--sort-common,--as-needed,-z,relro,-z,now"
 SRC      := hostap
 HOSTAPD  := $(SRC)/hostapd/
 WPA_SUPP := $(SRC)/wpa_supplicant/

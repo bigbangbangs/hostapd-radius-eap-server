@@ -1,1 +1,2 @@
+# the key for server/client communications
 127.0.0.1 secretclientkey
