@@ -36,7 +36,9 @@ make certificates
 
 _At this point, `hostapd` can be run_
 
-# hostapd server
+# usage
+
+## hostapd server
 
 To run the server
 
@@ -44,7 +46,7 @@ To run the server
 cd bin && ./hostapd hostapd.conf
 ```
 
-# EAP test client
+## EAP test client
 
 To test a client can connect
 
@@ -53,3 +55,11 @@ cd bin && ./eapol_test -a 127.0.0.1 -c eapol_test.conf -s secretclientkey -M 11:
 ```
 
 _Notice the MAC here is not the MAB'd one in the config as `eapol_test` is acting like a client and is authenticating as a user via the test config_
+
+## MD4
+
+The MD4s expected for MSCHAPV2 are not ones that can be quickly generated and instead require specific formatting. A small utility has been included to help.
+
+```
+cd utils && go run md4.go --password test
+```
