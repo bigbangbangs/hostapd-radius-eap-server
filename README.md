@@ -6,6 +6,8 @@ Provides setup to run `hostapd` as a RADIUS/EAP server (developmentally).
 This is mostly a "knowledge" repository and parts can translate to production but the defaults
 within this repository are meant for "quick start" over "proper".
 
+![build](https://github.com/enckse/hostapd-radius-eap-server/actions/workflows/main.yml/badge.svg)
+
 # build
 
 To build `hostapd` with the necessary settings simply run `make`

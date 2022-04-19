@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: "deps"
-        run: apk add openssl-dev linux-headers make go git
+        run: apk add openssl-dev openssl linux-headers make go git
       - name: "build"
         run: make
       - name: "install"
