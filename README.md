@@ -4,7 +4,9 @@ hostapd RADIUS/EAP server
 Provides setup to run [hostapd](https://w1.fi/hostapd/) as a RADIUS/EAP server (developmentally).
 
 This is mostly a "knowledge" repository and parts can translate to production but the defaults
-within this repository are meant for "quick start" over "proper".
+within this repository are meant for "quick start" over "proper". While there may not be explicit
+README entries for various files, the glue and ability to run/test everything for a hostapd server
+instance should be within this repository.
 
 Goals:
 
